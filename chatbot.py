@@ -23,8 +23,7 @@ except Exception as e:
 # CLOUD SERVICE #1: OPENROUTER (AI API)
 # ---------------------------------------------------------
 client = OpenAI(
-    # Also moving the API key to secrets for safety during deployment
-    api_key=st.secrets.get("OPENROUTER_API_KEY", "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"),
+    api_key=st.secrets["OPENROUTER_API_KEY"], 
     base_url="https://openrouter.ai/api/v1"
 )
 
