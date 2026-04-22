@@ -34,11 +34,17 @@ st.set_page_config(
 )
 
 # 2. Improved Styling
+# 2. Improved Styling
 st.markdown(
     """
     <style>
     /* Targeting Streamlit chat message containers */
     .stChatMessage { border-radius: 15px; margin-bottom: 10px; }
+    
+    /* Hiding the Streamlit top menu, deploy button, and GitHub icons */
+    #MainMenu {visibility: hidden;}
+    header {visibility: hidden;}
+    .stAppDeployButton {display:none;}
     </style>
     """,
     unsafe_allow_html=True
